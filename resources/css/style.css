@@ -1,3 +1,5 @@
+/* global styles and styles for more than one section */
+
 html {
   font-family: Helvetica, sans-serif;
   font-size: 18px;
@@ -9,6 +11,17 @@ html {
   width: 960px;
   margin: 0 auto;
 }
+
+
+/* class for items that are in a centered row on larger screens and
+   become a column on smaller screens */
+
+.gallery {
+  justify-content: center;
+}
+
+
+/* ------ header section  --- */
 
 header {
   height: 31rem;
@@ -80,12 +93,7 @@ h1 {
 }
 
 
-/* class for items that are in a centered row on larger screens and
-   become a column on smaller screens */
-
-.gallery {
-  justify-content: center;
-}
+/* ------ main section - gallery with icons --- */
 
 figure {
   display: flex;
@@ -114,12 +122,15 @@ figure img {
 
 img.narrow {
   width: 70%;
-  /* 3.5rem are 70% of  5rem (the width of the image-box) */
+  /* 3.5rem are 70% of 5rem (the width of the image-box) */
 }
 
 figcaption {
   text-align: center;
 }
+
+
+/* --- main section - gallery with paragraphs --- */
 
 .gallery-item {
   width: 35%;
@@ -144,6 +155,9 @@ p {
   padding-bottom: 5rem;
 }
 
+
+/* --- footer --- */
+
 footer {
   align-items: center;
   background-color: azure;
@@ -159,6 +173,7 @@ footer img {
 
 
 /* first breakpoint when the header-bar touches the window borders */
+
 @media only screen and (max-width: 960px) {
   .container {
     width: 100%;
@@ -183,8 +198,8 @@ footer img {
 }
 
 
-/* second breakpoint when the header-bar gets crouded
-   only header adjustments and font-size */
+/* additional breakpoint when the header-bar gets crouded
+   only apply header adjustments and font-size */
 
 @media only screen and (max-width: 680px) {
   header {
@@ -205,8 +220,7 @@ footer img {
   .menu-button {
     display: inline-block;
   }
-  figcaption,
-  p {
+  figcaption, p {
     font-size: 0.77rem;
   }
 }
