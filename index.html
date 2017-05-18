@@ -10,9 +10,11 @@
 
 <body>
   <header>
-    <div class="header-bar">
-      <img src="./resources/images/logo-white.png" alt="logo" role="presentation" />
-      <span>Tortoiseshell Optics</span>
+    <div class="header-bar container">
+      <div class="logo-group">
+        <img src="./resources/images/logo-white.png" alt="logo" role="presentation" />
+        <span>Tortoiseshell Optics</span>
+      </div>
       <nav role="navigation">
         <ul>
           <li><a href="#">Services</a></li>
@@ -21,24 +23,33 @@
         </ul>
       </nav>
     </div>
-    <h1>Don't just look, see.</h1>
+    <div class="heading container">
+      <h1>Don't just look, see.</h1>
+
+    </div>
   </header>
   <main>
-    <div class="gallery">
+    <div class="gallery container">
       <figure>
-        <img src="./resources/images/paper-icon.png" alt="paper-icon" role="presentation">
+        <div class="image-box">
+          <img class="narrow" src="./resources/images/paper-icon.png" alt="paper-icon" role="presentation">
+        </div>
         <figcaption>Comprehensive Exams</figcaption>
       </figure>
       <figure>
-        <img src="./resources/images/ruler-icon.png" alt="ruler-icon" role="presentation">
+        <div class="image-box">
+          <img src="./resources/images/ruler-icon.png" alt="ruler-icon" role="presentation">
+        </div>
         <figcaption>Custom Fittings</figcaption>
       </figure>
       <figure>
-        <img src="./resources/images/truck-icon.png" alt="truck-icon" role="presentation">
+        <div class="image-box">
+          <img src="./resources/images/truck-icon.png" alt="truck-icon" role="presentation">
+        </div>
         <figcaption>Fast Delivery</figcaption>
       </figure>
     </div>
-    <div class="gallery">
+    <div class="gallery container">
       <div class="gallery-item">
         <h2>Philosophy</h2>
         <p>
@@ -48,15 +59,15 @@
       <div class="gallery-item">
         <h2>Appointments</h2>
         <p>
-          Schedule an appointment by calling us at (312) 654-0987.
-          We're open Tuesday - Saturday, 9AM - 6PM.
+          Schedule an appointment by calling us at (312) 654-0987. We're open Tuesday - Saturday, 9AM - 6PM.
         </p>
       </div>
     </div>
   </main>
-  <footer>
+  <footer class="container">
     <img src="./resources/images/logo-black.png" alt="logo" role="presentation">
-  </footer>
+    <span>Copyright Tortoiseshell Optics</span>
+</footer>
 </body>
 
 </html>
