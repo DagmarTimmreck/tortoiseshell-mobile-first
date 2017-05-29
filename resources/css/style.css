@@ -4,6 +4,7 @@ html {
   line-height: 1.4;
 }
 
+
 /* company logo and title for header and footer */
 
 .company {
@@ -14,12 +15,16 @@ html {
 .company img {
   height: 1.5rem;
   width: auto;
+  padding-right: 1rem;
 }
+
 .company span {
   display: none;
 }
 
+
 /* header */
+
 header {
   height: 17rem;
   background-image: url("../images/glasses-bg.png");
@@ -39,7 +44,6 @@ header {
   background-color: cadetblue;
 }
 
-
 header .company {
   padding-left: 2rem;
   padding-right: 1rem;
@@ -55,13 +59,15 @@ nav {
 
 h1 {
   position: relative;
-  top: 12rem;
+  top: 12rem; /* header-bar + 5rem */
   padding: 1rem 0;
+  margin: 0;
   background-color: white;
   font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
 }
+
 
 /* main */
 
@@ -71,6 +77,7 @@ h1 {
   align-items: center;
   padding-top: 3.77rem;
 }
+
 
 /* first gallery - items are figures */
 
@@ -82,6 +89,7 @@ figure {
   width: 5rem;
   margin: 0;
 }
+
 figure img {
   max-width: 4.5rem;
   height: auto;
@@ -100,7 +108,9 @@ figcaption {
   text-align: center;
 }
 
+
 /* second gallery - items are text-blocks */
+
 h2 {
   padding: 0.5rem 0;
   margin: 0;
@@ -119,6 +129,7 @@ p {
   font-size: 0.77rem;
 }
 
+
 /* footer */
 
 footer {
@@ -129,4 +140,108 @@ footer {
 
 footer .company {
   padding: 4rem;
+}
+
+
+/* adaptions for larger screens */
+
+/* enough space to display navigation bar */
+
+@media only screen and (min-width: 650px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 22rem;
+    background-position: 30%;
+  }
+  .company span {
+    display: block;
+  }
+  nav {
+    display: block;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  nav li {
+    display: inline-block;
+    padding: 1rem 2rem 1rem 0;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  .menu-button {
+    display: none;
+  }
+
+  h1 {
+    display: inline-block;
+    top: 8rem; /* header-bar + 5rem */
+    right: 1rem; /* 2rem is too much at this point */
+    height: 2rem;
+    padding: 0.75rem 2rem; /* 4rem is too much at this point */
+    font-size: 1.33rem;
+  }
+
+  .gallery {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    padding: 0;
+  }
+
+  figure {
+    padding: 3rem;
+  }
+
+  .gallery-item {
+    width: 35%;
+    padding: 2.5%;
+  }
+
+  h2 {
+    display: inline-block;
+    width: 10rem;
+    padding: 0.5rem 1.25rem;
+    text-align: left;
+  }
+
+  footer {
+    justify-content: flex-start;
+  }
+}
+
+/* point where the actually designed header padding is good */
+@media only screen and (min-width: 750px) {
+  h1 {
+    right: 2rem;
+    padding: 0.75rem 4rem;
+  }
+}
+
+/* for widths larger than 960 px a container is needed */
+@media only screen and (min-width: 960px) {
+  header {
+    height: 31rem;
+  }
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .header-bar {
+    position: absolute;
+    top: 1rem;
+    width: 960px;
+    align-self: center;
+  }
+  h1 {
+    top: 14rem; /* 1rem + header-bar + 10rem */
+    height: 3rem;
+    padding: 1.5rem 5rem;
+    font-size: 2rem;
+
+  }
 }
