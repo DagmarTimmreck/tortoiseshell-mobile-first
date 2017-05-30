@@ -153,7 +153,7 @@ footer .company {
     flex-direction: column;
     align-items: flex-end;
     height: 22rem;
-    background-position: 30%;
+    background-position: 35%;
   }
   .company span {
     display: block;
@@ -178,10 +178,12 @@ footer .company {
   }
 
   h1 {
+    align-self: flex-end;
     display: inline-block;
     top: 8rem; /* header-bar + 5rem */
     right: 1rem; /* 2rem is too much at this point */
     height: 2rem;
+    width: auto;
     padding: 0.75rem 2rem; /* 4rem is too much at this point */
     font-size: 1.33rem;
   }
@@ -228,6 +230,8 @@ footer .company {
     height: 31rem;
   }
   .container {
+    display: flex;
+    flex-direction: column;
     width: 960px;
     margin: 0 auto;
   }
