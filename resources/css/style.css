@@ -211,7 +211,8 @@ footer .company {
     text-align: left;
   }
 
-  footer {
+  footer .container {
+    flex-direction: row;
     justify-content: flex-start;
   }
 }
